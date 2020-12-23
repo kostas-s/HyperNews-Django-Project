@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HyperNews</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <h2>Hyper news</h2>
+    <div>
+        <form action="/news/" method="get">
+            <label for="q">Search: </label>
+            <input type="text" name="q" id="q">
+            <br>
+            <button type="submit" value="Search">Submit</button>
+        </form>
+    </div>
+    <div>
+    {% include "news/block_link.html" %}
+    {% block content %}
+    {% endblock %}
+    </div>
+    <div>
+        <a href="/news/create/" target="_blank">Add news</a>
+    </div>
+</body>
+</html>

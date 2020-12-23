@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    {% for k, v in context.items %}
+    <h4>{{ k }}</h4>
+    <ul>
+        <li>
+        {% for news in v %}
+        <a target ="_blank" href="/news/{{ news.link }}/">{{ news.title }}</a>
+        {% endfor %}
+        </li>
+    </ul>
+    {% endfor %}
+</body>
+</html>
