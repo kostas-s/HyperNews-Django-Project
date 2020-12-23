@@ -3,7 +3,7 @@ A news-posts hosting web application built on Django.
  
 ## This project makes use of the following:
 * Django Framework
-* Makes use of DTL
+* DTL
 * HTML / CSS
 
 ## Application Features
